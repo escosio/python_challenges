@@ -25,13 +25,32 @@ chatnicks = {
         ('evan','realnflfans'):'gopackgo'
         }
 
+'''
+1. make set of people with nicknames
+2. for each key in chats,
+     pick out value for key
+     for each item in value
+       check if item is in set of people with nicknames
+       if (yes) {
+
+       } else {
+
+       }s
+
+'''
+
+
 names_in_chat= set()    # creates empty set
 
 for channel_members in chats.values():  #loops chats and returns the values as channel_members
     for name in channel_members:
         names_in_chat.add(name)  # loops chats values and adds them to names_in_chat
 
-# print(names_in_chat)
+all_chats = set()
+
+for chat_name in chats.keys():
+    all_chats.add(chat_name)
+# print(names_in_chat)     
 
 ppl_with_nicks = set()      # creates empty set
 
@@ -40,6 +59,9 @@ for person in chatnicks.keys():   # loops the chat nicknames set and gets the ke
 
 # print(ppl_with_nicks)
 
-# write if statement to check if names in chat have nicks
-ppl_wo_nicks= set(names_in_chat.difference(ppl_with_nicks))
-print(ppl_wo_nicks)
+ppl_wo_nicks = {} #creats empty dictionary
+
+# check chats for names
+
+# for x in chat.values():
+#     if
