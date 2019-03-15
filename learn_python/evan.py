@@ -50,7 +50,7 @@ all_chats = set()
 
 for chat_name in chats.keys():
     all_chats.add(chat_name)
-# print(names_in_chat)     
+# print(names_in_chat)
 
 ppl_with_nicks = set()      # creates empty set
 
@@ -63,5 +63,17 @@ ppl_wo_nicks = {} #creats empty dictionary
 
 # check chats for names
 
-# for x in chat.values():
-#     if
+# check values of chats to see if member is person of
+
+# for members in chat.values()
+
+# function to check for nickname
+
+def check_for_nick(x):
+    if chatnicks.get(person[0]) == x:
+        print("skip, has nickname")
+    else:
+        ppl_wo_nicks["x"] = chatnicks.keys()
+
+check_for_nick("scott")
+print(ppl_wo_nicks)
