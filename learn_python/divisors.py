@@ -8,7 +8,9 @@ divisors = set()
 
 
 for elem in range:
-    if user_input / elem == 0:
+    if user_input % elem == 0:
         divisors.add(elem)
+    else:
+        continue
 
 print(divisors)

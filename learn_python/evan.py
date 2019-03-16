@@ -51,7 +51,7 @@ for x in chatnames:
     check_for_nicks(x)
 
 print(ppl_without_names)
-#
+# previous attempts
 # '''
 # 1. make set of people with nicknames
 # 2. for each key in chats,
