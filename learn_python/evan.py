@@ -25,32 +25,69 @@ chatnicks = {
         ('evan','realnflfans'):'gopackgo'
         }
 
-# create list of chatnames
-# loop through chats names,
-#     for name in set
-#         if in chat nicknames
-#             do nothing
-#         elif in chat nicknames
-#             add to dictionary
+# pick a name from set of names
+# create a set ppl with nicknames
+# loop through list if name is in set of nicknames
 
-
+chatnicks_keys = chatnicks.keys()
 chatnames =  set()
+ppl_wo_nicks = set()
 ppl_without_names =  dict()
+all_chats = set()
+names_in_chat= set()    # creates empty set
+
+for channel_members in chats.values():  #loops chats and returns the values as channel_members
+    for name in channel_members:
+        names_in_chat.add(name)  # loops chats values and adds them to names_in_chat
+
+for chat_name in chats.keys():
+    all_chats.add(chat_name)
 
 for names in chats.keys():
     chatnames.add(names)
 
-def check_for_nicks(x):
-    for x in chats.values():
-        if x in chatnicks.keys():
-            print("nothing")
-        else:
-            ppl_without_names[x] = "chats.values()"
+# for value in names_in_chat:
+#     if value in chatnicks.keys():
+#         # add to ppl w nickname
+#         ppl_with_nicks[value] = value
+#     else:
+#         print(value)
 
-for x in chatnames:
-    check_for_nicks(x)
+# for x in chatnames:
+#     if x in ppl_with_nicks:
+#         print(x + " was not added")
+#     else:
+#         ppl_wo_nicks.add(x)
+for x in chats.values():
+    if x in chatnicks.keys():
+        print(x + " is not added.")
+    else:
+        ppl_wo_nicks.add(x)
 
+print(ppl_wo_nicks)
+
+'''
+
+# def check_for_nicks(name):
+#     # for x in chats.values():
+#     if name == chatnicks.keys()[0]:
+#         print("nothing")
+#     else:
+#         ppl_without_names[name] = chats.values()
+
+
+
+
+
+# for cset in chatnames:
+#     for names in cset:
+#         for x in names:
+#             check_for_nicks(x)
+
+# print(chatnames)
 print(ppl_without_names)
+
+
 # previous attempts
 # '''
 # 1. make set of people with nicknames
@@ -64,17 +101,12 @@ print(ppl_without_names)
 # '''
 #
 #
-# names_in_chat= set()    # creates empty set
-#
-# for channel_members in chats.values():  #loops chats and returns the values as channel_members
-#     for name in channel_members:
-#         names_in_chat.add(name)  # loops chats values and adds them to names_in_chat
-#
-# all_chats = set()
-#
-# for chat_name in chats.keys():
-#     all_chats.add(chat_name)
-# # print(names_in_chat)
+
+all_chats = set()
+
+for chat_name in chats.keys():
+    all_chats.add(chat_name)
+# print(names_in_chat)
 #
 # ppl_with_nicks = set()      # creates empty set
 #
