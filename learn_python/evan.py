@@ -25,14 +25,6 @@ chatnicks = {
         ('evan','realnflfans'):'gopackgo'
         }
 
-# create list of chatnames
-# loop through chats names,
-#     for name in set
-#         if in chat nicknames
-#             do nothing
-#         elif in chat nicknames
-#             add to dictionary
-
 '''
 1. make set of people with nicknames
 2. for each key in chats,
