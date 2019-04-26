@@ -25,7 +25,6 @@ def check_prime(x):
     elif user_num % x == 0:
         sys.exit(str(user_num)+ " is not prime because it divides evenly into " + str(x))
 
-
 for num_in_range in potential_divisors:   # looping through all possible divisors
     check_prime(num_in_range)
 
